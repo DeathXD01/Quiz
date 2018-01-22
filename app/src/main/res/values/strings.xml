@@ -1,3 +1,42 @@
 <resources>
     <string name="app_name">Quiz</string>
+    <string name="app_title" translatable="false">"The Witcher 3 Quiz"</string>
+    <string name="gender_title">Gender</string>
+    <string name="gender_female">Female</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_none">None</string>
+    <string name="name_edit_text">Name</string>
+    <string name="first_question_title">1. Choose the witchers!</string>
+    <string name="first_question_ciri" translatable="false">Ciri</string>
+    <string name="first_question_eskel" translatable="false">Eskel</string>
+    <string name="first_question_geralt" translatable="false">Geralt</string>
+    <string name="first_question_emhyr" translatable="false">Emhyr</string>
+    <string name="second_question_title">2. Where is the residency of the Wolf School?</string>
+    <string name="second_question_novigrad" translatable="false">Novigrad</string>
+    <string name="second_question_ard_skellig" translatable="false">Ard Skellig</string>
+    <string name="second_question_kaer_morhen" translatable="false">Kaer Morhen</string>
+    <string name="second_question_oxenfurt" translatable="false">Oxenfurt</string>
+    <string name="third_question_title">3. Who is the emperor of Nifgaard (full name)?</string>
+    <string name="third_answer_Edit_text">The name of the emperor</string>
+    <string name="fourth_question_title">4. Chose the sorceresses!</string>
+    <string name="fourth_question_philippa" translatable="false">Philippa Eilhart</string>
+    <string name="fourth_question_triss" translatable="false">Triss Merigold</string>
+    <string name="fourth_question_yennefer" translatable="false">Yennefer Vengerberg</string>
+    <string name="fourth_question_keira" translatable="false">Keira Metz</string>
+    <string name="fifth_question_title">5. Here I\'m just curious about your opinion. So, select which character how much you like or hate!</string>
+    <string name="fifth_question_zirael" translatable="false">Zirael</string>
+    <string name="fifth_question_yennefer" translatable="false">Yennefer</string>
+    <string name="fifth_question_triss" translatable="false">Triss</string>
+
+    <string name="welcome_message_hi">Hi&#160;</string>
+    <string name="welcome_message_gender">Your gender is&#160;</string>
+    <string name="first_result">1. answer&#160;</string>
+    <string name="second_result">2. answer is&#160;</string>
+    <string name="third_result">3. answer is&#160;</string>
+    <string name="fourth_result">4. answer is&#160;</string>
+    <string name="fifth_result_zirael">5. Zirael:&#160;</string>
+    <string name="fifth_result_yennefer">,&#160;Yennefer:&#160;</string>
+    <string name="fifth_result_triss">,&#160;Triss:&#160;</string>
+    <string name="correct">correct</string>
+    <string name="not_correct">not correct</string>
 </resources>

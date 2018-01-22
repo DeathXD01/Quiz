@@ -3,6 +3,7 @@ package com.example.android.quiz;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
@@ -16,14 +17,48 @@ import java.security.acl.Group;
 
 public class MainActivity extends AppCompatActivity {
 
-    /**
-     * TODO The app exit without any error message if gender isn't choose.
-     */
+    CheckBox geraltCorrect;
+    CheckBox eskelCorrect;
+    CheckBox ciriCorrect;
+    CheckBox emhyrCorrect;
+
+    RadioGroup secondQuestionGroup;
+    RadioButton correctAnswer;
+
+    EditText thirdAnswer;
+
+    CheckBox philippaCorrect;
+    CheckBox trissCorrect;
+    CheckBox yenneferCorrect;
+    CheckBox keiraCorrect;
+
+    RadioGroup ziraelRadioGroup;
+    RadioGroup yenneferRadioGroup;
+    RadioGroup trissRadioGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        geraltCorrect = findViewById(R.id.geralt_check_box);
+        eskelCorrect = findViewById(R.id.eskel_check_box);
+        ciriCorrect = findViewById(R.id.ciri_check_box);
+        emhyrCorrect = findViewById(R.id.emhyr_check_box);
+
+        secondQuestionGroup = findViewById(R.id.second_question_radio_group);
+        correctAnswer = findViewById(R.id.kaer_morhen_radio_button);
+
+        thirdAnswer = findViewById(R.id.third_answer_edit_text);
+
+        philippaCorrect = findViewById(R.id.philippa_check_box);
+        trissCorrect = findViewById(R.id.triss_check_box);
+        yenneferCorrect = findViewById(R.id.yennefer_check_box);
+        keiraCorrect = findViewById(R.id.keira_check_box);
+
+        ziraelRadioGroup = findViewById(R.id.zirael_radio_group);
+        yenneferRadioGroup = findViewById(R.id.yennefer_radio_group);
+        trissRadioGroup = findViewById(R.id.triss_radio_group);
     }
 
     /**
@@ -44,22 +79,23 @@ public class MainActivity extends AppCompatActivity {
     private String createSummary(String isFirstAnswerCorrect, String genderText, String name, String isSecondAnswerCorrect,
                                  String isThirdAnswerCorrect, String isFourthAnswerCorrect, String fifthQuestionZirael,
                                  String fifthQuestionYennefer, String fifthQuestionTriss) {
-        String summaryMessage = "Hi " + name + "!";
-        summaryMessage += "\nYour gender is " + genderText;
-        summaryMessage += "\n1. answer " + isFirstAnswerCorrect;
-        summaryMessage += "\n2. answer is " + isSecondAnswerCorrect;
-        summaryMessage += "\n3. answer is " + isThirdAnswerCorrect;
-        summaryMessage += "\n4. answer " + isFourthAnswerCorrect;
-        summaryMessage += "\n5. Zirael: " + fifthQuestionZirael + ", Yennefer: " + fifthQuestionYennefer + ", Triss " + fifthQuestionTriss;
+        String summaryMessage = getString(R.string.welcome_message_hi) + name + "!";
+        summaryMessage += "\n"+getString(R.string.welcome_message_gender) + genderText;
+        summaryMessage += "\n"+getString(R.string.first_result) + isFirstAnswerCorrect;
+        summaryMessage += "\n"+getString(R.string.second_result) + isSecondAnswerCorrect;
+        summaryMessage += "\n"+getString(R.string.third_result) + isThirdAnswerCorrect;
+        summaryMessage += "\n"+getString(R.string.fourth_result) + isFourthAnswerCorrect;
+        summaryMessage += "\n"+getString(R.string.fifth_result_zirael) + fifthQuestionZirael + getString(R.string.fifth_result_yennefer)
+                + fifthQuestionYennefer + getString(R.string.fifth_result_triss) + fifthQuestionTriss;
 
         int points=0;
-        if(isFirstAnswerCorrect.equals("correct")){
+        if(isFirstAnswerCorrect.equals(getString(R.string.correct))){
             points++;
-        }if (isSecondAnswerCorrect.equals("correct")){
+        }if (isSecondAnswerCorrect.equals(getString(R.string.correct))){
             points++;
-        }if (isThirdAnswerCorrect.equals("correct")){
+        }if (isThirdAnswerCorrect.equals(getString(R.string.correct))){
             points++;
-        }if (isFourthAnswerCorrect.equals("correct")){
+        }if (isFourthAnswerCorrect.equals(getString(R.string.correct))){
             points++;
         }
         if(points==1) {
@@ -76,8 +112,6 @@ public class MainActivity extends AppCompatActivity {
      */
 
     private String fifthQuestionTriss() {
-        RadioGroup trissRadioGroup = findViewById(R.id.triss_radio_group);
-
         int trissRadioButtonId = trissRadioGroup.getCheckedRadioButtonId();
         RadioButton radioButton = trissRadioGroup.findViewById(trissRadioButtonId);
         int radioId = trissRadioGroup.indexOfChild(radioButton);
@@ -86,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
         String selection = "";
         selection = btn.getText().toString();
 
-        if (selection.equals("")) {
+        if (selection.equals(null)) {
             selection = "You didn't chose";
             return selection;
         } else {
@@ -100,8 +134,6 @@ public class MainActivity extends AppCompatActivity {
      */
 
     private String fifthQuestionYennefer() {
-        RadioGroup yenneferRadioGroup = findViewById(R.id.yennefer_radio_group);
-
         int yenneferRadioButtonId = yenneferRadioGroup.getCheckedRadioButtonId();
         RadioButton radioButton = yenneferRadioGroup.findViewById(yenneferRadioButtonId);
         int radioId = yenneferRadioGroup.indexOfChild(radioButton);
@@ -110,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
         String selection = "";
         selection = btn.getText().toString();
 
-        if (selection.equals("")) {
+        if (selection.equals(null)) {
             selection = "You didn't chose";
             return selection;
         } else {
@@ -124,8 +156,6 @@ public class MainActivity extends AppCompatActivity {
      */
 
     private String fifthQuestionZirael() {
-        RadioGroup ziraelRadioGroup = findViewById(R.id.zirael_radio_group);
-
         int ziraelRadioButtonId = ziraelRadioGroup.getCheckedRadioButtonId();
         RadioButton radioButton = ziraelRadioGroup.findViewById(ziraelRadioButtonId);
         int radioId = ziraelRadioGroup.indexOfChild(radioButton);
@@ -149,11 +179,6 @@ public class MainActivity extends AppCompatActivity {
 
     private String fourthQuestion() {
         String isAnswerCorrect;
-
-        CheckBox philippaCorrect = findViewById(R.id.philippa_check_box);
-        CheckBox trissCorrect = findViewById(R.id.triss_check_box);
-        CheckBox yenneferCorrect = findViewById(R.id.yennefer_check_box);
-        CheckBox keiraCorrect = findViewById(R.id.keira_check_box);
 
         boolean philippaIsCorrect = philippaCorrect.isChecked();
         boolean trissIsCorrect = trissCorrect.isChecked();
@@ -187,7 +212,7 @@ public class MainActivity extends AppCompatActivity {
             isAnswerCorrect = "empty";
             return isAnswerCorrect;
         } else {
-            isAnswerCorrect = "correct";
+            isAnswerCorrect = getString(R.string.correct);
             return isAnswerCorrect;
         }
     }
@@ -197,18 +222,17 @@ public class MainActivity extends AppCompatActivity {
      */
 
     private String thirdQuestion() {
-        EditText thirdAnswer = findViewById(R.id.third_answer_edit_text);
         String isThirdAnswerCorrect = thirdAnswer.getText().toString();
         String thirdAnswerResult;
         if (isThirdAnswerCorrect.equals("Emhyr var Emreis")) {
-            thirdAnswerResult = "correct";
+            thirdAnswerResult = getString(R.string.correct);
             return thirdAnswerResult;
         }
         if (isThirdAnswerCorrect.equals("")) {
             thirdAnswerResult = "empty";
             return thirdAnswerResult;
         } else {
-            thirdAnswerResult = "not correct.";
+            thirdAnswerResult = getString(R.string.correct);
             return thirdAnswerResult;
         }
     }
@@ -217,9 +241,6 @@ public class MainActivity extends AppCompatActivity {
      * @return which RadioButton is cheched, and is it the correct answer.
      */
     private String secondQuestion() {
-        RadioGroup secondQuestionGroup = findViewById(R.id.second_question_radio_group);
-        RadioButton correctAnswer = findViewById(R.id.kaer_morhen_radio_button);
-
         int correctAnswerId = 0;
 
         int secondQuestionRadioButtonId = secondQuestionGroup.getCheckedRadioButtonId();
@@ -228,14 +249,14 @@ public class MainActivity extends AppCompatActivity {
         String isSecondAnswerCorrect;
 
         if (secondQuestionRadioButtonId == correctAnswerId) {
-            isSecondAnswerCorrect = "correct";
+            isSecondAnswerCorrect = getString(R.string.correct);
             return isSecondAnswerCorrect;
         }
         if (secondQuestionRadioButtonId <= 0) {
             isSecondAnswerCorrect = "empty";
             return isSecondAnswerCorrect;
         } else {
-            isSecondAnswerCorrect = "not correct";
+            isSecondAnswerCorrect = getString(R.string.correct);
             return isSecondAnswerCorrect;
         }
     }
@@ -245,11 +266,6 @@ public class MainActivity extends AppCompatActivity {
      */
     private String firstQuestion() {
         String isAnswerCorrect;
-
-        CheckBox geraltCorrect = findViewById(R.id.geralt_check_box);
-        CheckBox eskelCorrect = findViewById(R.id.eskel_check_box);
-        CheckBox ciriCorrect = findViewById(R.id.ciri_check_box);
-        CheckBox emhyrCorrect = findViewById(R.id.emhyr_check_box);
 
         boolean geraltIsCorrect = geraltCorrect.isChecked();
         boolean eskelIsCorrect = eskelCorrect.isChecked();
@@ -266,7 +282,7 @@ public class MainActivity extends AppCompatActivity {
             return isAnswerCorrect;
         }
         if (geraltIsCorrect == true && eskelIsCorrect == true) {
-            isAnswerCorrect = "correct";
+            isAnswerCorrect = getString(R.string.correct);
             return isAnswerCorrect;
         }
         if ((geraltIsCorrect == true && eskelIsCorrect != true) || (geraltIsCorrect != true && eskelIsCorrect == true)) {
@@ -277,7 +293,7 @@ public class MainActivity extends AppCompatActivity {
             isAnswerCorrect = "is empty";
             return isAnswerCorrect;
         } else {
-            isAnswerCorrect = "is not correct";
+            isAnswerCorrect = "is "+getString(R.string.not_correct);
             return isAnswerCorrect;
         }
     }
@@ -296,14 +312,14 @@ public class MainActivity extends AppCompatActivity {
 
         String genderText;
         if (genderId == femaleGender) {
-            genderText = "Female";
+            genderText = getString(R.string.gender_female);
             return genderText;
         }
         if (genderId == maleGender) {
-            genderText = "Male";
+            genderText = getString(R.string.gender_male);
             return genderText;
         } else {
-            genderText = "none";
+            genderText = getString(R.string.gender_none);
             return genderText;
         }
     }

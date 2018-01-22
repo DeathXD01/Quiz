@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gender_title">Nem</string>
+    <string name="gender_female">Nő</string>
+    <string name="gender_male">Férfi</string>
+    <string name="name_edit_text">Név</string>
+    <string name="first_question_title">1. Válaszd ki a witchereket!</string>
+    <string name="second_question_title">2. Hol van a Farkas Iskolának az iskolája?</string>
+    <string name="third_question_title">3. Ki Nifgaard császára (teljes neve)?</string>
+    <string name="third_answer_Edit_text">A császár neve</string>
+    <string name="fourth_question_title">4. Válaszd ki a varázslónőket!</string>
+    <string name="fifth_question_title">5. Itt csak kíváncsi vagyok a véleményedre. Szóval, csak válasz ki, hogy melyik karaktert mennyire szereted vagy utálod!</string>
+    <string name="app_name">Quíz</string>
+    <string name="gender_none">Nincs</string>
+</resources>
