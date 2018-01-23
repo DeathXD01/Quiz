@@ -12,4 +12,23 @@
     <string name="fifth_question_title">5. Itt csak kíváncsi vagyok a véleményedre. Szóval, csak válasz ki, hogy melyik karaktert mennyire szereted vagy utálod!</string>
     <string name="app_name">Quíz</string>
     <string name="gender_none">Nincs</string>
+    <string name="first_two_more">kettővel több válaszod van</string>
+    <string name="first_one_more">eggyel több válaszod van</string>
+    <string name="first_one_correct">egy helyes válazod van</string>
+    <string name="fourth_three_correct">három helyes válaszod van</string>
+    <string name="fourth_two_correct">két helyes válasod van</string>
+    <string name="fourth_one_correct">egy helyes válaszod van</string>
+    <string name="welcome_message_hi">Szia&#160;</string>
+    <string name="welcome_message_gender">A nemed&#160;</string>
+    <string name="first_result">1. válasz</string>
+    <string name="second_result">2. válasz</string>
+    <string name="third_result">3. válasz</string>
+    <string name="fourth_result">4. válasz</string>
+    <string name="correct">&#160;jó</string>
+    <string name="not_correct">&#160;nem jó</string>
+    <string name="points_you_have">Neked&#160;</string>
+    <string name="one_point">&#160;pontod van a 4-ből</string>
+    <string name="more_points">&#160;pontod van a 4-ből</string>
+    <string name="empty">&#160;üres</string>
+    <string name="fifth_didnt_chose">Nem választottál</string>
 </resources>
