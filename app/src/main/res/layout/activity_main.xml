@@ -16,14 +16,17 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:layout_marginTop="8dp"
+            android:fontFamily="@font/almendra_italic"
             android:text="@string/app_title"
             android:textAllCaps="true"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:fontFamily="@font/amarante"
             android:text="@string/gender_title"
             android:textAllCaps="true" />
 
@@ -39,6 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="8dp"
+                android:fontFamily="@font/amarante"
                 android:paddingLeft="8dp"
                 android:text="@string/gender_female" />
 
@@ -46,6 +50,7 @@
                 android:id="@+id/male_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/amarante"
                 android:paddingLeft="8dp"
                 android:text="@string/gender_male" />
         </RadioGroup>
@@ -55,6 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:fontFamily="@font/amarante"
             android:hint="@string/name_edit_text" />
 
         <!-- First question begins-->
@@ -62,6 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:fontFamily="@font/amarante"
             android:text="@string/first_question_title" />
 
         <!--The position for the 1. question-->
@@ -81,12 +88,14 @@
                     android:id="@+id/ciri_check_box"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
                     android:text="@string/first_question_ciri" />
 
                 <CheckBox
                     android:id="@+id/eskel_check_box"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
                     android:text="@string/first_question_eskel" />
             </LinearLayout>
 
@@ -99,12 +108,14 @@
                     android:id="@+id/geralt_check_box"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
                     android:text="@string/first_question_geralt" />
 
                 <CheckBox
                     android:id="@+id/emhyr_check_box"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
                     android:text="@string/first_question_emhyr" />
 
             </LinearLayout>
@@ -116,6 +127,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:fontFamily="@font/amarante"
             android:text="@string/second_question_title" />
 
         <!--The position of the 2. question-->
@@ -129,22 +141,26 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/amarante"
                 android:text="@string/second_question_novigrad" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/amarante"
                 android:text="@string/second_question_ard_skellig" />
 
             <RadioButton
                 android:id="@+id/kaer_morhen_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/amarante"
                 android:text="@string/second_question_kaer_morhen" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/amarante"
                 android:text="@string/second_question_oxenfurt" />
         </RadioGroup>
 
@@ -154,6 +170,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:fontFamily="@font/amarante"
             android:text="@string/third_question_title" />
 
         <EditText
@@ -161,6 +178,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:fontFamily="@font/amarante"
             android:hint="@string/third_answer_Edit_text" />
 
         <!-- Fourth question begins-->
@@ -168,6 +186,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:fontFamily="@font/amarante"
             android:text="@string/fourth_question_title" />
 
         <!--The position for the 4. question-->
@@ -187,12 +206,14 @@
                     android:id="@+id/philippa_check_box"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
                     android:text="@string/fourth_question_philippa" />
 
                 <CheckBox
                     android:id="@+id/triss_check_box"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
                     android:text="@string/fourth_question_triss" />
             </LinearLayout>
 
@@ -205,12 +226,14 @@
                     android:id="@+id/yennefer_check_box"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
                     android:text="@string/fourth_question_yennefer" />
 
                 <CheckBox
                     android:id="@+id/keira_check_box"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
                     android:text="@string/fourth_question_yennefer" />
 
             </LinearLayout>
@@ -221,6 +244,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:fontFamily="@font/amarante"
             android:text="@string/fifth_question_title" />
 
         <!--5. question's answer group-->
@@ -242,18 +266,21 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
                     android:text="@string/fifth_question_zirael"
                     android:textSize="24sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
                     android:text="@string/fifth_question_yennefer"
                     android:textSize="24sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
                     android:text="@string/fifth_question_triss"
                     android:textSize="24sp" />
 
